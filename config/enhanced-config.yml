@@ -1,0 +1,126 @@
+# Enhanced Agent OS Configuration
+# Version: 2.0.0 (Enhanced for Large-Scale Development)
+
+agent_os_version: 2.0.0-enhanced
+base_version: 1.4.1
+
+# Core Agent Configuration
+agents:
+  claude_code:
+    enabled: true
+    max_context_tokens: 200000
+    context_warning_threshold: 150000
+  cursor:
+    enabled: false
+    max_context_tokens: 200000
+    context_warning_threshold: 150000
+
+# Enhanced Context Management
+context_management:
+  enabled: true
+  smart_loading: true
+  incremental_loading: true
+  context_caching: true
+  relevance_scoring: true
+  max_context_size: 180000
+  warning_threshold: 150000
+  cache_duration: 3600  # seconds
+  
+# Tech Stack Detection
+tech_stack_detection:
+  enabled: true
+  auto_detect: true
+  validate_standards: true
+  multi_stack_support: true
+  detection_patterns:
+    - "package.json"
+    - "requirements.txt"
+    - "Gemfile"
+    - "pom.xml"
+    - "build.gradle"
+    - "Cargo.toml"
+    - "go.mod"
+    - "composer.json"
+
+# Git Branch Management
+git_management:
+  enabled: true
+  branch_aware_context: true
+  pre_commit_validation: true
+  branch_strategy: "gitflow"  # gitflow, github-flow, custom
+  auto_branch_detection: true
+  commit_message_templates: true
+
+# Codebase Analysis
+codebase_analysis:
+  enabled: true
+  structure_mapping: true
+  dependency_analysis: true
+  code_duplication_detection: true
+  quality_metrics: true
+  max_analysis_files: 10000
+  exclude_patterns:
+    - "node_modules/"
+    - ".git/"
+    - "dist/"
+    - "build/"
+    - "__pycache__/"
+    - ".venv/"
+
+# MCP Integration
+mcp_integration:
+  enabled: true
+  auto_discovery: true
+  tool_orchestration: true
+  performance_monitoring: true
+  max_concurrent_tools: 5
+  tool_timeout: 30  # seconds
+
+# Project Types with Enhanced Support
+project_types:
+  default:
+    instructions: ~/.agent-os/instructions
+    standards: ~/.agent-os/standards
+    
+  large_scale:
+    instructions: ~/.agent-os/project_types/large_scale/instructions
+    standards: ~/.agent-os/project_types/large_scale/standards
+    context_management:
+      max_context_size: 150000
+      incremental_loading: true
+      modular_context: true
+      
+  microservices:
+    instructions: ~/.agent-os/project_types/microservices/instructions
+    standards: ~/.agent-os/project_types/microservices/standards
+    tech_stack_detection:
+      multi_stack_support: true
+      service_specific_standards: true
+      
+  legacy_recovery:
+    instructions: ~/.agent-os/project_types/legacy_recovery/instructions
+    standards: ~/.agent-os/project_types/legacy_recovery/standards
+    codebase_analysis:
+      deep_analysis: true
+      pattern_detection: true
+      refactoring_suggestions: true
+
+default_project_type: large_scale
+
+# Enhanced Logging
+logging:
+  enabled: true
+  level: "INFO"  # DEBUG, INFO, WARN, ERROR
+  log_file: ".agent-os/logs/agent-os.log"
+  context_usage_log: ".agent-os/logs/context-usage.log"
+  performance_log: ".agent-os/logs/performance.log"
+
+# Performance Monitoring
+performance:
+  enabled: true
+  track_context_usage: true
+  track_command_execution: true
+  track_mcp_tool_usage: true
+  generate_reports: true
+  report_interval: 86400  # seconds (daily)
+
