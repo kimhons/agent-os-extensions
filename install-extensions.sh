@@ -100,12 +100,12 @@ else
     echo "    ⚠️  Tech stack detection completed with warnings (check logs)"
 fi
 
-# Discover MCP tools
-echo "  - Discovering MCP tools..."
-if python3 .agent-os/mcp-integration/mcp-orchestrator.py --discover --create-workflows 2>/dev/null; then
-    echo "    ✅ MCP tools discovered"
+# Auto-discover and integrate MCP tools
+echo "  - Auto-discovering and integrating MCP tools..."
+if python3 .agent-os/mcp-integration/enhanced-mcp-orchestrator.py --auto-discover 2>/dev/null; then
+    echo "    ✅ MCP tools automatically discovered and integrated"
 else
-    echo "    ⚠️  MCP tool discovery completed with warnings (check logs)"
+    echo "    ⚠️  MCP tool auto-discovery completed with warnings (check logs)"
 fi
 
 # Analyze codebase (if there are source files)
@@ -156,9 +156,9 @@ fi
 # Show MCP tools discovery results
 if [ -f ".agent-os/mcp-integration/tools/discovered-tools.json" ]; then
     TOOL_COUNT=$(python3 -c "import json; data=json.load(open('.agent-os/mcp-integration/tools/discovered-tools.json')); print(len(data))" 2>/dev/null || echo "0")
-    echo "🛠️  MCP Tools: $TOOL_COUNT tools discovered"
+    echo "🛠️  MCP Tools: $TOOL_COUNT tools automatically discovered and integrated"
 else
-    echo "🛠️  MCP Tools: Discovery pending or no tools found"
+    echo "🛠️  MCP Tools: Auto-discovery pending or no tools found"
 fi
 
 # Show codebase analysis results
@@ -185,16 +185,22 @@ echo "   - /create-spec (now with tech stack detection)"
 echo "   - /create-tasks (now with smart context management)"
 echo "   - /execute-tasks (now with MCP integration and branch management)"
 echo ""
-echo "2. Use new extension tools directly:"
-echo "   - python3 .agent-os/codebase-analysis/codebase-analyzer.py --report"
-echo "   - python3 .agent-os/git-management/branch-manager.py --report"
-echo "   - python3 .agent-os/context/context-manager.py --report"
-echo "   - python3 .agent-os/mcp-integration/mcp-orchestrator.py --list-tools"
+echo "2. Your MCP tools are now automatically integrated:"
+echo "   - python3 .agent-os/mcp-integration/enhanced-mcp-orchestrator.py --list-tools"
+echo "   - python3 .agent-os/mcp-integration/enhanced-mcp-orchestrator.py --report"
+echo "4. Configure extensions in .agent-os/config/enhanced-config.yml"
 echo ""
-echo "3. Configure extensions in .agent-os/config/enhanced-config.yml"
-echo ""
-echo "4. Check logs in .agent-os/logs/ if you encounter any issues"
+echo "5. Check logs in .agent-os/logs/ if you encounter any issues"
 echo ""
 echo "🚀 Your Agent OS is now enhanced for large-scale development!"
 echo "   Continue using your existing Agent OS workflow with new superpowers."
+
+
+echo ""
+echo "3. Use additional extension tools:"
+echo "   - python3 .agent-os/codebase-analysis/codebase-analyzer.py --report"
+echo "   - python3 .agent-os/git-management/branch-manager.py --report"
+echo "   - python3 .agent-os/context/context-manager.py --report"
+echo ""
+echo "4. Configure extensions in .agent-os/config/enhanced-config.yml"
 

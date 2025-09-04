@@ -44,10 +44,10 @@ If you've experienced:
 - **Architecture insights** for better design decisions
 
 ### 🛠️ MCP Orchestrator
-- **Automatic tool discovery** finds your existing MCP tools
-- **Workflow orchestration** combines multiple tools seamlessly
-- **Performance monitoring** optimizes tool usage
-- **Custom workflows** for complex automation tasks
+- **Automatic tool discovery** finds your existing MCP tools during installation
+- **Seamless integration** configures all tools for Agent OS automatically
+- **Intelligent workflows** combines multiple tools for powerful automation
+- **Zero configuration** - your 25+ MCP tools work immediately after installation
 
 ## 🚀 Quick Start
 
@@ -81,9 +81,10 @@ The installation script:
 - ✅ Preserves your existing Agent OS setup
 - ✅ Adds extensions alongside current functionality  
 - ✅ Auto-detects your project's tech stack
-- ✅ Discovers your MCP tools
+- ✅ **Automatically discovers and integrates all your MCP tools**
 - ✅ Analyzes your codebase structure
 - ✅ Sets up Git hooks for branch management
+- ✅ **Creates workflows combining your MCP tools**
 
 ## 📖 How It Enhances Agent OS
 
@@ -172,17 +173,19 @@ python3 .agent-os/tech-stack/stack-detector.py --detect --project-root ./mobile
 # Each gets appropriate standards automatically
 ```
 
-### Integrating 25+ MCP Tools
+### Automatic MCP Tools Integration
+
+Your 25+ MCP tools are automatically discovered and integrated:
 
 ```bash
-# Discover all your tools
-python3 .agent-os/mcp-integration/mcp-orchestrator.py --discover
+# View all your integrated tools (automatic after installation)
+python3 .agent-os/mcp-integration/enhanced-mcp-orchestrator.py --list-tools
 
-# Create workflows combining multiple tools
-python3 .agent-os/mcp-integration/mcp-orchestrator.py --create-workflows
+# See integration report
+python3 .agent-os/mcp-integration/enhanced-mcp-orchestrator.py --report
 
-# Execute coordinated tool workflows
-python3 .agent-os/mcp-integration/mcp-orchestrator.py --execute-workflow comprehensive_review
+# Your tools are now available in Agent OS commands automatically
+# /execute-tasks will use appropriate tools based on the task
 ```
 
 ## ⚙️ Configuration
