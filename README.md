@@ -51,13 +51,19 @@ If you've experienced:
 
 ## 🚀 Quick Start
 
-### Prerequisites
-- [Agent OS](https://buildermethods.com/agent-os) (recommended but not required)
-- Python 3.8+
-- Git (for Git-related features)
-- Your existing MCP tools
+### For Claude Desktop Users (Recommended)
 
-### Installation
+**5-Minute Setup:**
+```bash
+# In Claude Desktop, navigate to your project and run:
+git clone https://github.com/kimhons/agent-os-extensions.git && cd agent-os-extensions && ./install-extensions.sh
+```
+
+**📖 Detailed Guides:**
+- **[Claude Desktop Installation Guide](CLAUDE_DESKTOP_INSTALLATION.md)** - Complete step-by-step instructions
+- **[Quick Start for Claude](QUICK_START_CLAUDE.md)** - 5-minute setup guide
+
+### General Installation
 
 1. **Clone this repository to your project:**
    ```bash
