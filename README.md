@@ -62,6 +62,8 @@ git clone https://github.com/kimhons/agent-os-extensions.git && cd agent-os-exte
 **📖 Detailed Guides:**
 - **[Claude Desktop Installation Guide](CLAUDE_DESKTOP_INSTALLATION.md)** - Complete step-by-step instructions
 - **[Quick Start for Claude](QUICK_START_CLAUDE.md)** - 5-minute setup guide
+- **[Completion Strategy](COMPLETION_STRATEGY.md)** - Strategy for completing 300k+ LOC applications
+- **[Recovery Checklist](RECOVERY_CHECKLIST.md)** - Day-by-day checklist for project recovery
 
 ### General Installation
 
